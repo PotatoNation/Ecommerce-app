@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Title Here</title>
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5630c6d3b4.js" crossorigin="anonymous"></script>
+
+    <!-- Your custom styles -->
+   
+
+    <!-- Inline CSS -->
+    <style>
+        /* Header */
+        #header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 80px;
+            background: #E3E6F7;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+            z-index: 999;
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #navbar li {
+            list-style: none;
+            padding: 0 20px;
+            position: relative;
+        }
+        #navbar li a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            transition: 0.3s ease;
+        }
+        #navbar li a:hover,
+        #navbar li a.active {
+            color: #088178
+        }
+        #navbar li a.active ::after 
+        #navbar li a:hover::after{
+            content: "";
+            width: 30%;
+            height: 2px;
+            background: #088178 ;
+            position: absolute;
+            bottom: -4px;
+            left: 20px;
+        }
+
+        #mobile {
+            display: none;
+            align-items: center;
+            
+        }
+        /* Hero*/
+        #hero {
+            background-image: url("img/banner/Tienda\ Tienda\ Icono\ Icono\ PNG\ \,dibujos\ \ Almacenar\ Iconos\,\ Tienda\,\ Tienda\ PNG\ y\ Vector\ para\ Descargar\ Gratis\ _\ Pngtree.jpeg");
+            height: 90vh;
+            width: 100%;
+            background-position: top 25% right 0;
+            background-size: cover;
+            padding: 0 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        #hero h4 {
+            padding-bottom: 15px;
+        }
+        #hero h1 {
+            color: #088178;
+        }
+        #hero button {
+            background-color: black;
+            color: #088178;
+            border: 0;
+            padding: 14px 80ps 14px 65px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 15px;
+        }
+        #feature {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        #feature .fe-box{
+            width: 180px;
+            text-align: center;
+            padding: 25px 15px;
+            box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.3);
+            border: 1px solid #cce7d0;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        #feature .fe-box:hover {
+            box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+        }
+        #feature .fe-box h6 {
+            padding: 9px 8px 6px 8px;
+            line-height: 1;
+            border-radius: 4px;
+            color: #088178;
+            background-color: #fddde4;
+            display: inline-block;
+        }
+        #feature .fe-box:nth-child(2) h6 {
+            background-color: #cdebbc;
+        }
+        #feature .fe-box:nth-child(3) h6 {
+            background-color: #d1e8f2;
+        }
+        #feature .fe-box:nth-child(4) h6 {
+            background-color: #cdd4f8;
+        }
+        #feature .fe-box:nth-child(5) h6 {
+            background-color: #f6dbf6;
+        }
+        #feature .fe-box img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        #product1 {
+            text-align: center;
+
+        }
+        #product1 .pro-container {
+           display: flex;
+           justify-content: space-around;
+           padding-top: 20px;
+           flex-wrap: wrap;
+           
+        }
+        #product1 .pro {
+            width: 25%;
+            min-width: 250px;
+            padding: 10px 12px;
+            border: 1px solid #cce7d0;
+            border-radius: 25%;
+            cursor: pointer;
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+            margin: 15px 0;
+            transition: 0.2s ease;
+            border-radius: 25px;
+            position: relative;
+        }
+        #product1 .pro img {
+            width: 100%;
+            border-radius: 20px;
+        }
+        #product1 .pro .des {
+            text-align: start;
+            padding: 10px 0;
+        }
+        #product1 .pro .des span {
+            color: #606063;
+            font-size: 12px;
+        }
+        #product1 .pro:hover {
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+        }
+        #product1 .pro .des h5 {
+            padding-top: 7px;
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+        #product1 .pro .des i {
+            font-size: 12px;
+            color: rgba(243, 181, 25);
+        }
+        #product1 .pro .des h4 {
+            padding-top: 7px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #088178;
+        }
+        #product1 .pro .cart {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50px;
+            background-color: #e8f6ea;
+            font-weight: 500;
+            color:#088178;
+            border: 1px solid #cce7d0;
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+        }
+        #banner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url("img/banner/d410800f7d7d328ffaf95e5b49fada7d.jpg");
+            width: 100%;
+            height: 40vh;
+            background-size: cover;
+            background-position: center;
+        }
+        #banner h4 {
+            color: black;
+            font-size: 16px;
+        }
+        #banner h2 span {
+            color: #ef3636;
+        }
+        #banner button:hover {
+            background: #088178;
+            color: #fff;
+        }
+        #sm-banner .banner-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url("");
+            width: 100%;
+            height: 40vh;
+            background-size: cover;
+            background-position: center;
+        }
+        #sm-banner .banner-box:hover button {
+            background: #088178;
+            border: 1px solid #088178;
+        }
+        button.white {
+            font-size: 13px;
+            font-weight: 600;
+            padding: 11px 18px;
+            color: black;
+            background-color: transparent;
+            cursor: pointer;
+            border: 1px solid #fff;
+            outline: none;
+            transition: 0.2s;
+        }
+        #newsletter {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            background-image: url("img/banner/d410800f7d7d328ffaf95e5b49fada7d.jpg");
+            background-repeat: no-repeat;
+            background-position: 20% 30%;
+            background-color: #041e42;
+            padding: 40px 80px;
+            margin: 40px 0;
+
+        }
+        #newsletter .form {
+            display: flex;
+            width: 40%;
+        }
+        #newsletter h4 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #fff;
+        }
+        #newsletter p {
+            font-size: 14px ;
+            font-weight: 600;
+            color: black;
+        }
+        #newsletter p span {
+            color: #ffdb79;
+        }
+        #newsletter input {
+            height: 3.125rem;
+            padding: 0 1.25em;
+            font-size: 14px;
+            width: 100%;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            outline: none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        #newsletter button {
+          background-color: #088178;
+          color: #fff;
+          white-space: nowrap;
+          border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        footer .col {
+            display: flex;
+            flex-direction: column;
+           align-items: flex-start;
+           margin-bottom: 20px;
+        }
+        footer h4 {
+          font-size: 14px;
+          padding-bottom: 20px;
+        }
+        footer p {
+          font-size: 13px;
+          margin: 0 0 8px 0;
+        }
+        footer a {
+          font-size: 13px;
+          text-decoration: none;
+          color: #222;
+          margin-bottom: 10px;
+        }
+        footer .follow {
+            margin-top: 20px;
+        }
+        footer .follow i {
+            color: #465b52;
+            padding-right: 4px;
+            cursor: pointer;
+        }
+        footer .install .row img {
+            border: 1px solid #088178;
+            border-radius: 6px;
+        }
+        footer .follow i:hover,
+        footer a:hover {
+            color: #088178;
+        }
+        footer .copyright  {
+          width: 100%;
+          text-align: center;
+        }
+
+        /* shop page */
+         #page-header {
+            background-image: url("img/banner/eb66f8e8-4095-45dc-9cce-0fc120fd5a61.jpeg");
+            width: 100%;
+            height: 40vh;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 14px;
+        }
+        #page-header h2,
+        #page-header p {
+            color: #fff;
+        }
+        #pagination {
+            text-align: center;
+        }
+        #pagination a {
+            text-decoration: none;
+            background-color: #088178;
+            padding: 15px 20px;
+            border-radius: 4px;
+            color: #fff;
+            font-weight: 600;
+        }
+        #pagination a i {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        @media (max-width:799px) { 
+            section {
+    display: block;
+    unicode-bidi: isolate;
+}
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0%;
+        right: -3000px;
+        height: 100vh;
+        width: 300px;
+        background-color: #E3E6F3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+    nav.bar.active {
+        right: 0px;
+    }
+
+    #navbar li {
+        margin-bottom: 25px;
+    }
+    
+    #mobile {
+            display: flex;
+            align-items: center;
+            
+        }
+        #mobile i {
+            color: #1a1a1a;
+            font-size: 24px;
+            padding-left: 20px;
+        }
+        #close {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            color: #222;
+            font-size: 24px;
+        }
+}
+      #color {
+        position: absolute;
+        left: 0;
+        color: #222;
+        font-size: 24px;
+      }
+      #hero {
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+      }
+      #feature {
+    justify-content: center;
+  }
+  #feature .fe-box {
+    margin: 15px 15px;
+}
+#product1 .pro-container {
+    justify-content: center;
+}
+#product1 .pro {
+    margin: 15px;
+}
+#banner {
+    height: 40vh;
+}
+@media (max-width: 477px) {
+    .section-p1 {
+    padding: 20px;
+    }
+    #header {
+   
+    padding: 10px 30px;
+   
+}
+h2 {
+    font-size: 32px;
+}
+}
+h1 {
+    font-size: 38px;
+}
+
+#hero {
+    padding: 0 20px;
+    background-position: 55%;
+}
+#feature {
+    justify-content: space-between;
+}
+#feature .fe-box {
+    width: 155px;
+    margin: 0 0 15px 0;
+}
+#product1 .pro {
+    width: 100%;
+}
+footer .copyright {
+    text-align: start;
+}
+
+/* blog-header*/
+
+
+
+    </style>
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="C:\ecommerce\img\other icons\download (1).jpg" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a  href="shop.html">Shop</a></li>
+                <li><a class='active' href="blog.html">Blog</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+    <section id="page-header" class="blog-header">
+        <h2>#readmore</h2>
+       
+        <p>Read All Case Studies For Our Products!</p>
+       
+    </section>
+    <section id="blog">
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="img/blog img/c88f234d-1712-4927-a275-8bfca34eebb9.jpeg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>The Cotton-Jersey Zip-Up Hoodie</h4>
+                <p>Cool information describing the image to the left, another wordy blog to give the following website a little bit of class and thickness, so don't come for me, lol!</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="product1" class="section-p1">
+        <div class="pro-container">
+            <div class="pro" onclick="window.location.href='sproduct.html';">
+                <img src="C:\ecommerce\img\Hawaiian Parrots Multicolor Best Design Hawaiian Shirt.jpeg" alt=""> 
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Multi-Color T-Shirt</h5>
+                    <div class="star">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+
+                </div>
+                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro-container">
+                <div class="pro">
+                    <img src="C:\ecommerce\img\Abstract Printing Hawaiian Shirt Ver 465 (1).jpeg" alt=""> 
+                    <div class="des">
+                        <span>adidas</span>
+                        <h5>Abstract Pattern</h5>
+                        <div class="star">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$78</h4>
+    
+                    </div>
+                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                </div>
+                <div class="pro-container">
+                    <div class="pro">
+                        <img src="C:\ecommerce\img\Boutique men's hawaiian shirts,affordable men's hawaiian shirts Online for Sale _ hawalili.jpeg" alt=""> 
+                        <div class="des">
+                            <span>adidas</span>
+                            <h5>Palm Tree</h5>
+                            <div class="star">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                            </div>
+                            <h4>$78</h4>
+        
+                        </div>
+                        <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                    </div>
+                    <div class="pro-container">
+                        <div class="pro">
+                            <img src="C:\ecommerce\img\Hawaiian shirt (1).jpeg" alt=""> 
+                            <div class="des">
+                                <span>adidas</span>
+                                <h5>Hula Girl</h5>
+                                <div class="star">
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                </div>
+                                <h4>$78</h4>
+            
+                            </div>
+                            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                        </div>
+                        <div class="pro-container">
+                            <div class="pro">
+                                <img src="C:\ecommerce\img\Hawaiian shirt.jpeg" alt=""> 
+                                <div class="des">
+                                    <span>adidas</span>
+                                    <h5>Hula Girl</h5>
+                                    <div class="star">
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                      <i class="fas fa-star"></i>
+                                    </div>
+                                    <h4>$78</h4>
+                
+                                </div>
+                                <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                            </div>
+                            <div class="pro-container">
+                                <div class="pro">
+                                    <img src="C:\ecommerce\img\Homens Camisa Impressão Tropical Sem Camiseta (1).jpeg" alt=""> 
+                                    <div class="des">
+                                        <span>adidas</span>
+                                        <h5>Surfer</h5>
+                                        <div class="star">
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                        </div>
+                                        <h4>$78</h4>
+                    
+                                    </div>
+                                    <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+                                </div>
+                               
+                                   
+                        
+            
+        </div>
+    </section>
+    <section id="pagination" id="section-p1">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+    </section> 
+   
+    <section id="newsletter" class="section-p1">
+        <div id="newtext">
+            <h4>Sign up for Newsletters</h4>
+            <p>Get email updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="you email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+    <footer class="section-p1">
+        <div class="col">
+          <img>
+          <h4>Contact</h4>
+          <p><strong>Address :</strong> 5555 Real Location, Street 22, Shirt-Town</p>
+          <p><strong>Phone :</strong> 0909 778 1234</p>
+          <p><strong>Hours :</strong> 10:00 to 10:00, Mon - Sat</p>
+          <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Deliver Infomation</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">Account</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/banner/Freepiker _ apple app store icon (1).jpg" alt=""> 
+                <img src="img/banner/YouTube & Google Play announce licensing agreement… (1).jpg" alt=""> 
+            </div>
+            <p>Secured Payment Methods</p>
+            <i class="fa-duotone fa-credit-card"></i>
+            <i class="fa-brands fa-google-pay"></i>
+            <i class="fa-brands fa-paypal"></i>
+
+            
+        </div>
+        <div class="copyright">
+            <p>2024. TechBizz-Ecommerce Assignment. TS</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
